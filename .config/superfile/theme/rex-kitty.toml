@@ -1,0 +1,54 @@
+# ========= Border =========
+file_panel_border = "#6c7086"  # Keeping border colors as-is (neutral)
+sidebar_border = "#1e1e2e"    # Neutral border color
+footer_border = "#6c7086"     # Neutral border color
+
+# ========= Border Active =========
+file_panel_border_active = "#a61a1a"  # Soft Blue -> Red
+sidebar_border_active = "#a61a1a"     # Pink -> Still Pink
+footer_border_active = "#a61a1a"     # Green -> Orange
+modal_border_active = "#a61a1a"       # Neutral Grey
+
+# ========= Background (bg) =========
+full_screen_bg = "#191616"    # Custom Background
+file_panel_bg = "#191616"     # Custom Background
+sidebar_bg = "#191616"        # Custom Background
+footer_bg = "#191616"         # Custom Background
+modal_bg = "#191616"          # Custom Background
+
+# ========= Foreground (fg) =========
+full_screen_fg = "#ffffff"    # Custom Foreground (light)
+file_panel_fg = "#ffffff"     # Custom Foreground (light)
+sidebar_fg = "#ffffff"        # Custom Foreground (light)
+footer_fg = "#ffffff"         # Custom Foreground (light)
+modal_fg = "#ffffff"          # Custom Foreground (light)
+
+# ========= Special Color =========
+cursor = "#a61a1a"            # Custom Cursor Color (dark red)
+correct = "#ffa500"           # Correct action color (Orange)
+error = "#f38ba8"             # Error action color (pink)
+hint = "#ff6347"              # Hint color (Red)
+cancel = "#eba0ac"            # Cancel color (pink)
+gradient_color = ["#ff6347", "#a61a1a"]  # Gradient (red and dark red)
+
+# ========= File Panel Special Items =========
+file_panel_top_directory_icon = "#bbbbbb"  # Directory Icon Color (orange)
+file_panel_top_path = "#a61a1a"           # Path Color (red)
+file_panel_item_selected_fg = "#ffffff"   # Selected Item Foreground (white)
+file_panel_item_selected_bg = "#2b1f1f"   # Selected Item Background (dark brown)
+
+# ========= Sidebar Special Items =========
+sidebar_title = "#bbbbbb"        # Sidebar Title (red)
+sidebar_item_selected_fg = "#ffffff"  # Sidebar Item Selected Foreground (white)
+sidebar_item_selected_bg = "#2b1f1f"  # Sidebar Item Selected Background (dark brown)
+sidebar_divider = "#868686"          # Sidebar Divider (grey)
+
+# ========= Modal Special Items =========
+modal_cancel_fg = "#383838"          # Modal Cancel Foreground (dark grey)
+modal_cancel_bg = "#eba0ac"          # Modal Cancel Background (pink)
+modal_confirm_fg = "#383838"         # Modal Confirm Foreground (dark grey)
+modal_confirm_bg = "#a61a1a"         # Modal Confirm Background (red)
+
+# ========= Help Menu =========
+help_menu_hotkey = "#a61a1a"         # Help Menu Hotkey (red)
+help_menu_title = "#eba0ac"          # Help Menu Title (pink)
