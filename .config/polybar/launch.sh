@@ -1,1 +1,0 @@
-/home/aor_rex/.config/polybar/launch.sh

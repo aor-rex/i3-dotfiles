@@ -1,1 +1,0 @@
-/home/aor_rex/.config/i3/start_picom.sh
