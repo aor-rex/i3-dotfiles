@@ -25,7 +25,7 @@ secondary = #ffffff
 alert = #A54242
 disabled = #707880
 
-[bar/mybar]
+[bar/example]
 width = 100%
 height = 18pt
 radius = 5
@@ -56,21 +56,21 @@ module-margin = 1
 separator = |
 separator-foreground = ${colors.disabled}
 
-font-0 = ubuntumono:size=9.5;2
+font-0 = ubuntumono:size=10;2
 font-1 = unifont:fontformat=truetype:8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 font-3 = Font Awesome 7 Free:pixelsize=12;2
 font-4 = Font Awesome 7 Free Solid:pixelsize=12;2
 font-5 = Font Awesome 7 Brands:pixelsize=12;2
 
-modules-left = i3 appmenu music
-modules-center = xwindow
-modules-right = pulseaudio filesystem memory cpu network battery date powermenu tray
+modules-left = filesystem memory cpu temperature appmenu music
+modules-center = i3
+modules-right = vpn  tray network pulseaudio battery date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-enable-ipc = true
+; enable-ipc is set globally in [bar/example], no need to repeat here
 
 ; wm-restack = generic
 ; wm-restack = bspwm
@@ -136,8 +136,8 @@ label-separator = " | "
 label-separator-foreground = ${colors.disabled}
 
 ; --- Main menu items ---
-menu-0-0 = 
-menu-0-0-exec = kitty &
+menu-0-0 = 
+menu-0-0-exec = code &
 menu-0-0-foreground = ${colors.primary}
 menu-0-0-padding = 2
 
@@ -152,63 +152,37 @@ menu-0-2-foreground = ${colors.primary}
 menu-0-2-padding = 2
 
 
-
 [module/music]
 type = custom/script
-exec = ~/.config/polybar/ytmusic/play_music.sh
+exec = ~/.config/polybar/play_music.sh
 interval = 0
 label-padding = 2
 label-foreground = ${colors.primary}
 click-left = xdg-open https://music.youtube.com/
 
-[module/xwindow]
-type = internal/xwindow
-interval = 1
-
-; --- Display Format ---
-format = <label>
-
-; --- Label ---
-label =   %title:0:60:...%
-label-foreground = ${colors.foreground}
-
-; --- When no window title is present ---
-label-empty =   Desktop
-label-empty-foreground = ${colors.disabled}
-
-
 [module/filesystem]
 type = internal/fs
 interval = 25
-
 mount-0 = /
 
-; --- Display Format ---
 format-mounted = <label-mounted>
 format-unmounted = <label-unmounted>
 
-; --- Labels ---
-label-mounted =   %percentage_used%% used
-label-mounted-foreground = ${colors.primary}
-
-label-unmounted =   %mountpoint% not mounted
+label-mounted = %{F#a61a1a}%{F-} %percentage_used%% Used
+label-mounted-padding = 0
+label-mounted-padding-left = 2
+label-unmounted = %{F#a61a1a}%{F-}  %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
 
 
 [module/pulseaudio]
 type = internal/pulseaudio
-
-; Update interval
 interval = 1
-
-; Scroll to adjust volume
+label-padding = 2
+label-foreground = ${colors.primary}
 scroll-up = volume-up
 scroll-down = volume-down
-
-; Left click = mute / unmute
 click-left = pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-; Right click = open mixer (change to your preferred app)
 click-right = pavucontrol
 
 ; --- Formatting ---
@@ -243,14 +217,16 @@ format-prefix = " "
 format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
-[module/wireless-network]
-type = internal/network
-interface = wlan0
+[module/vpn]
+type = custom/script
+exec = nmcli connection show --active | grep -q vpn && echo "%{F#6272a4}🔒%{F-} VPN"
+interval = 3
+
 [module/network]
 type = internal/network
 interface = wlan0
 interface-type = wireless
-interval = 3.0
+interval = 1.0
 accumulate-stats = true
 unknown-as-up = true
 speed-unit = B/s
@@ -265,13 +241,16 @@ signal-bad = #ff5555
 
 ; Connected
 format-connected = <ramp-signal> <label-connected>
-label-connected = %essid%  %downspeed:9%
+label-connected = %essid% %downspeed:9%
 label-connected-foreground = ${self.connected-color}
+label-connected-padding = 0
+
 
 ; Disconnected
 format-disconnected = <label-disconnected>
 label-disconnected = Offline
 label-disconnected-foreground = ${self.disconnected-color}
+
 
 ; Packet loss animation
 format-packetloss = <animation-packetloss> <label-connected>
@@ -280,8 +259,8 @@ animation-packetloss-1 = 📶
 animation-packetloss-framerate = 500
 
 ; Signal strength icons
-ramp-signal-0 = 
-ramp-signal-1 = 
+ramp-signal-0 = 
+ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
@@ -295,16 +274,16 @@ ramp-signal-4-foreground = ${self.signal-good}
 ramp-signal-5-foreground = ${self.signal-good}
 
 
-
 [module/date]
 type = internal/date
 interval = 1
 
 date = %A, %H:%M
-date-alt = %Y, %B %d %H:%M:%S
+date-alt = %Y, %B %d | %H:%M:%S
 
 label = %date%
 label-foreground = ${colors.primary}
+
 
 [module/battery]
 type = internal/battery
@@ -326,7 +305,7 @@ label-charging =   %percentage%%
 label-charging-foreground = #6FE27B
 label-discharging = %percentage%%
 label-discharging-foreground = #E6E6E6
-label-full = 100%
+label-full =  100%
 label-full-foreground = #6FE27B
 label-low = LOW %percentage%%
 label-low-foreground = #FF5C5C
@@ -360,10 +339,57 @@ animation-discharging-3 = 
 animation-discharging-4 = 
 animation-discharging-framerate = 700
 
+[module/temperature]
+type = internal/temperature
+interval = 5
+thermal-zone = 0
+zone-type = x86_pkg_temp
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+
+base-temperature = 20
+warn-temperature = 60
+units = false
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+
+label = %temperature-c%°C
+label-warn = %temperature-c%°C
+label-warn-foreground = #ff5555
+
+; --- Ramp Icons ---
+ramp-0 = 
+ramp-1 = 
+ramp-2 = 
+ramp-3 = 
+
+
+ramp-0-foreground = #8be9fd
+ramp-1-foreground = #50fa7b
+ramp-2-foreground = #f1fa8c
+ramp-3-foreground = #ff5555
+
+
+
+
+
+[module/tray]
+type = internal/tray
+tray-position = right
+tray-detached = false
+tray-padding = 2
+tray-scale = 1.0
+tray-maxsize = 20
+tray-background = ${colors.background}
+tray-foreground = ${colors.foreground}
+tray-transparent = false
+
+
 [module/powermenu]
 type = custom/menu
 expand-right = true
 format-spacing = 1
+
 label-open = 
 label-open-foreground = ${colors.red}
 label-close = 
@@ -391,6 +417,7 @@ menu-2-0 =  Confirm Power Off
 menu-2-0-exec = shutdown now
 menu-2-1 =  Cancel
 menu-2-1-exec = menu-open-0
+
 
 
 

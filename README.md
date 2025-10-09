@@ -5,7 +5,7 @@ dotfiles for i3-wm using polybar and picom
 
 - **base:** i3-wm (i3 with gap support)  
 - **terminal:** kitty  
-- **launcher:** Rofi  
+- **launcher:** rofi  
 - **bar:** polybar (i3blocks and i3status also inluded)  
 - **compositor:** picom (toggleable)  
 - **wallpaper manager:** feh  

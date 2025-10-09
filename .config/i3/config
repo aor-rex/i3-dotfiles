@@ -321,7 +321,10 @@ bindsym $mod+Escape exec ~/.config/scripts/rexred-lock
 bindsym $mod+p exec --no-startup-id ~/.config/i3/start_picom.sh
 
 
+# Make app float
+for_window [class="nmgui"] floating enable, resize set 500 250, move position 1410 30
 
+for_window [class="Protonvpn-app"] floating enable
 
 
 
