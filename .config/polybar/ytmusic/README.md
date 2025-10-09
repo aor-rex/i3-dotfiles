@@ -41,7 +41,6 @@ interval = 0
 #click-left = xdg-open https://music.youtube.com/
 ```
 # screenshots
-![yt music](../screenshots/ytmusic-web.png)
-
+![yt-music](../screenshots/ytmusic-web.png)
 
 ![last.fm](../screenshots/last.fm.png)

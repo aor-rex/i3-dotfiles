@@ -74,7 +74,7 @@ manage i3-gaps dynamically.
 | `superfile` | file manager |
 
 # note
-- check out [ytmusic-polybar]{}
+- check out [ytmusic-polybar](https://github.com/aor-rex/i3-dotfiles/tree/main/.config/polybar/ytmusic)
 
 ## 📸 Screenshot
 
