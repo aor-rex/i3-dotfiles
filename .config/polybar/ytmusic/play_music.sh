@@ -19,7 +19,7 @@ if [ "$nowplaying" != "true" ] && [ "$player_status" = "Paused" ]; then
     exit 0
 fi
 
-# playing music
+# pausing & playing music
 if [ "$nowplaying" = "true" ]; then
     song="$title - $artist"
     status_icon=""

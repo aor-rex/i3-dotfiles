@@ -155,7 +155,7 @@ menu-0-2-padding = 2
 
 [module/music]
 type = custom/script
-exec = ~/.config/polybar/play_music.sh
+exec = ~/.config/polybar/ytmusic/play_music.sh
 interval = 0
 label-padding = 2
 label-foreground = ${colors.primary}
