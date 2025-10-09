@@ -73,8 +73,9 @@ manage i3-gaps dynamically.
 | `xrandr` | screen resolution |
 | `superfile` | file manager |
 
-
+# note
+- check out [ytmusic-polybar]{}
 
 ## 📸 Screenshot
 
-![alt text](Pictures/2025-10-07-052325_1920x1080_scrot.png)
+![screenshot 1](Pictures/2025-10-07-052325_1920x1080_scrot.png)
