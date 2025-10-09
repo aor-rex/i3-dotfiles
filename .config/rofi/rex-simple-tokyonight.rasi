@@ -31,8 +31,8 @@ element-icon, element-text, scrollbar {
 }
 
 window {
-  location : northwest;
-  width    : 280px;
+  location : center;
+  width    : 500px;
   x-offset : 4px;
   y-offset : 26px;
 

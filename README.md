@@ -59,7 +59,7 @@ manage i3-gaps dynamically.
 
 | dependency | description |
 |-------------|-------------|
-| `i3-gaps` | window manager |
+| `i3-wm` | window manager |
 | `polybar` | status bar |
 | `rofi` | app launcher |
 | `kitty` | terminal |

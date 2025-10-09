@@ -40,6 +40,9 @@ interval = 0
 #label-foreground = ${colors.primary}
 #click-left = xdg-open https://music.youtube.com/
 ```
+
+# note
+- should work with other web music player like [spotify](https://open.spotify.com) , [tidal](https://tidal.com) , [deezer](https://deezer.com) etc. (untested)
 # screenshots
 ![yt-music](../screenshots/ytmusic-web.png)
 
