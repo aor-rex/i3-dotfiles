@@ -375,7 +375,6 @@ animation-discharging-3 = 
 animation-discharging-4 = 
 animation-discharging-framerate = 700
 
-
 [module/powermenu]
 type = custom/menu
 expand-right = true
