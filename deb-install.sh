@@ -24,8 +24,10 @@ ninja -C build install
 
 echo "picom installed successfully!"
 cd .. || exit
+
+
 #optional installs
-read -p "install brave Browser? (y/n): " brave
+read -p "install brave browser? (y/n): " brave
 if [[ $brave == "y" || $brave == "Y" ]]; then
     sudo apt-install -y curl
     curl -fsS https://dl.brave.com/install.sh | sh
