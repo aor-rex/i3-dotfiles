@@ -46,11 +46,14 @@ manage i3-gaps dynamically.
 
 ## 🧾 miscellaneous
 
-- Toggle picom: `$mod + P` 
-- reload config: `$mod + Shift + C`
-- restart i3: `$mod + Shift + R`
-- exit i3: `$mod + Shift + E`
-- screenshot: `$mod + Print`
+| action | keybinds |
+|---------|-----------|
+| toggle picom | `$mod + P` |
+| reload config | `$mod + Shift + C` |
+| restart i3 | `$mod + Shift + R` |
+| exit i3 | `$mod + Shift + E` |
+| take screenshot | `$mod + Print` |
+
 
 
 ---
