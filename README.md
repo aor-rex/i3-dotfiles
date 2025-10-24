@@ -13,7 +13,7 @@ dotfiles for i3-wm using polybar and picom
 ## ⚙️ keybinds
 **$mod = windows key**
  ### 🪟 window management
-| action | keybinding |
+| action | keybinds |
 |--------|-------------|
 | open terminal | `$mod + Enter` |
 | kill focused window | `$mod + Shift + Q` |
@@ -29,7 +29,7 @@ dotfiles for i3-wm using polybar and picom
 ### 🖥️ workspaces
 workspaces are numbered **1–10**.
 
-| action | keybinding |
+| action | keybinds |
 |--------|-------------|
 | switch to workspace | `$mod + [1–0]` |
 | move window to workspace | `$mod + Shift + [1–0]` |
@@ -38,7 +38,7 @@ workspaces are numbered **1–10**.
 ### 🧩 gaps mode
 manage i3-gaps dynamically.
 
-| action | keybinding |
+| action | keybinds |
 |--------|-------------|
 | enter gap mode | `$mod + Shift + G` |
 | adjust inner/outer gaps | `+ / - / 0` (local) or `Shift + + / - / 0` (global) |
