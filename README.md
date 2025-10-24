@@ -73,7 +73,23 @@ manage i3-gaps dynamically.
 | `xrandr` | screen resolution |
 | `superfile` | file manager |
 
-# note
+## installing config files
+
+``` bash
+git clone https://github.com/aor-rex/i3-dotfiles.git
+cd i3-dotfiles
+```
+### for arch distros
+``` bash
+chmod +x arch-install.sh
+./arch-install.sh
+```
+### for debian distros
+``` bash
+chmod +x deb-install.sh
+./deb-install.sh
+```
+## note
 - check out [ytmusic-polybar](https://github.com/aor-rex/i3-dotfiles/tree/main/.config/polybar/ytmusic)
 
 ## 📸 Screenshot

@@ -36,15 +36,6 @@ echo "dependencies installed successfully!"
 #installing configuration files
 echo "installing configuration files..."
 
-if ! command -v git &> /dev/null
-then
-    echo "git could not be found, installing git..."
-    sudo pacman -S --noconfirm git --needed
-fi
-
-git clone https://github.com/aor-rex/i3-dotfiles.git
-cd i3-dotfiles
-
 cp -r .config/* ~/.config/
 cp -r Pictures/* ~/Pictures/
 
