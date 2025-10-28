@@ -95,6 +95,6 @@ chmod +x deb-install.sh
 ## note
 - check out [ytmusic-polybar](https://github.com/aor-rex/i3-dotfiles/tree/main/.config/polybar/ytmusic)
 
-## 📸 Screenshot
+## 📸 screenshot
 
 ![screenshot 1](Pictures/2025-10-07-052325_1920x1080_scrot.png)
