@@ -370,9 +370,6 @@ ramp-2-foreground = #f1fa8c
 ramp-3-foreground = #ff5555
 
 
-
-
-
 [module/tray]
 type = internal/tray
 tray-position = right

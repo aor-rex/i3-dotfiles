@@ -66,12 +66,12 @@ manage i3-gaps dynamically.
 | `polybar` | status bar |
 | `rofi` | app launcher |
 | `kitty` | terminal |
-| `picom-fitlabs-git` | Compositor |
+| `picom-fitlabs-git` | compositor |
 | `feh` | Wallpaper tool |
 | `brightnessctl` | brightness control |
 | `pactl` | audio control |
 | `nm-applet` | network tray |
-| `dex` | Autostart |
+| `dex` | autostart |
 | `scrot` | screenshot |
 | `xrandr` | screen resolution |
 | `superfile` | file manager |
