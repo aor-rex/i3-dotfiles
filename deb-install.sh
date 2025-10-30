@@ -33,6 +33,11 @@ if [[ $brave == "y" || $brave == "Y" ]]; then
     curl -fsS https://dl.brave.com/install.sh | sh
 fi
 
+read -p "install firefox? (y/n): " firefox
+if [[ $firefox == "y" || $brave == "Y" ]]; then
+    sudo apt-install firefox -y
+fi
+
 read -p "install vs code? (y/n): " code
 if [[ $code == "y" || $code == "Y" ]]; then
     sudo apt install software-properties-common apt-transport-https

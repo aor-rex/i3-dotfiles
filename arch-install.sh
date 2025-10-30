@@ -20,11 +20,15 @@ fi
 yay -S --noconfirm superfile picom-fitlabs-git
 
 #optional installs
-read -p "install brave Browser? (y/n): " brave
+read -p "install brave browser? (y/n): " brave
 if [[ $brave == "y" || $brave == "Y" ]]; then
     yay -S --noconfirm brave-bin
 fi
 
+read -p "install firefox? (y/n): " firefox
+if [[ $firefox == "y" || $brave == "Y" ]]; then
+    sudo pacman -S --noconfirm firefox
+fi
 read -p "install vs code? (y/n): " code
 if [[ $code == "y" || $code == "Y" ]]; then
     yay -S --noconfirm visual-studio-code-bin
