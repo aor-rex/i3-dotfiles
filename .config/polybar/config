@@ -141,7 +141,7 @@ menu-0-0-exec = code &
 menu-0-0-foreground = ${colors.primary}
 menu-0-0-padding = 2
 
-menu-0-1 = 
+menu-0-1 = 
 menu-0-1-exec = firefox &
 menu-0-1-foreground = ${colors.primary}
 menu-0-1-padding = 2
